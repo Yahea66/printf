@@ -10,10 +10,10 @@ int _printf(const char *format, ...)
 {
 char ch;
 char *str;
-int c = 0; 
+int c = 0;
 va_list args;
-va_start(args, format); 
-if (!format) 
+va_start(args, format);
+if (!format)
 {
 return -1;
 }
