@@ -8,6 +8,9 @@
  */
 int _printf(const char *format, ...)
 {
+if (!format) {
+return -1;
+}
 va_list args;
 va_start(args, format);
 char ch;
@@ -22,7 +25,7 @@ switch (*format)
 {
 case 'c':
 {
-ch = va_arg(args, int);
+ch = (char)va_arg(args, int);
 write(1, &ch, 1);
 c++;
 break;
